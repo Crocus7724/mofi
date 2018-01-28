@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15A141D0C34640700E8DCEB6 /* MofiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A146DB358F563B4F35F0B8 /* MofiView.swift */; };
 		15A14284E690F6B8B5B58D9B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A141B7B07431C2AF43DCF0 /* Config.swift */; };
 		15A14DB4752EA0CB21296597 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1452C860A0B42A6DDB299 /* SearchTextField.swift */; };
 		C44A99C4201B74AC00482437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44A99C3201B74AC00482437 /* AppDelegate.swift */; };
 		C44A99C8201B74AC00482437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44A99C7201B74AC00482437 /* Assets.xcassets */; };
 		C4EDAA94201C5B1F009F80AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EDAA93201C5B1F009F80AB /* main.swift */; };
+		C4EDAA99201E22F4009F80AB /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EDAA98201E22F3009F80AB /* Yams.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15A141B7B07431C2AF43DCF0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		15A1452C860A0B42A6DDB299 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
-		15A146DB358F563B4F35F0B8 /* MofiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MofiView.swift; sourceTree = "<group>"; };
 		C44A99C0201B74AC00482437 /* mofi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mofi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44A99C3201B74AC00482437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C44A99C7201B74AC00482437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C44A99CC201B74AC00482437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44A99CD201B74AC00482437 /* mofi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mofi.entitlements; sourceTree = "<group>"; };
 		C4EDAA93201C5B1F009F80AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C4EDAA98201E22F3009F80AB /* Yams.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yams.framework; path = Carthage/Build/Mac/Yams.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4EDAA99201E22F4009F80AB /* Yams.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +44,7 @@
 			children = (
 				C44A99C2201B74AC00482437 /* mofi */,
 				C44A99C1201B74AC00482437 /* Products */,
+				C4EDAA97201E22F3009F80AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,10 +65,17 @@
 				C44A99CD201B74AC00482437 /* mofi.entitlements */,
 				C4EDAA93201C5B1F009F80AB /* main.swift */,
 				15A141B7B07431C2AF43DCF0 /* Config.swift */,
-				15A146DB358F563B4F35F0B8 /* MofiView.swift */,
 				15A1452C860A0B42A6DDB299 /* SearchTextField.swift */,
 			);
 			path = mofi;
+			sourceTree = "<group>";
+		};
+		C4EDAA97201E22F3009F80AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4EDAA98201E22F3009F80AB /* Yams.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,6 +88,7 @@
 				C44A99BC201B74AC00482437 /* Sources */,
 				C44A99BD201B74AC00482437 /* Frameworks */,
 				C44A99BE201B74AC00482437 /* Resources */,
+				C4EDAA9A201E2313009F80AB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -134,6 +144,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C4EDAA9A201E2313009F80AB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Yams.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C44A99BC201B74AC00482437 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,7 +169,6 @@
 				C4EDAA94201C5B1F009F80AB /* main.swift in Sources */,
 				C44A99C4201B74AC00482437 /* AppDelegate.swift in Sources */,
 				15A14284E690F6B8B5B58D9B /* Config.swift in Sources */,
-				15A141D0C34640700E8DCEB6 /* MofiView.swift in Sources */,
 				15A14DB4752EA0CB21296597 /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +289,10 @@
 				CODE_SIGN_ENTITLEMENTS = mofi/mofi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = mofi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.crocus.mofi;
@@ -278,6 +308,10 @@
 				CODE_SIGN_ENTITLEMENTS = mofi/mofi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = mofi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.crocus.mofi;
