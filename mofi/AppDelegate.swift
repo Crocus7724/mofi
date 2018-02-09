@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let borderView = BorderView(config: &config)
         borderView.frame = NSRect(
                 x: 0,
-                y: textField.frame.origin.y - 3,
+                y: textField.frame.origin.y - borderViewHeight,
                 width: textField.frame.width,
                 height: borderViewHeight
         )
