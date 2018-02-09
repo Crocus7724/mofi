@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15A1416B612402F66A0717CF /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A147C84C7A21A80267BB90 /* AppStore.swift */; };
 		15A14284E690F6B8B5B58D9B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A141B7B07431C2AF43DCF0 /* Config.swift */; };
 		15A142AB558ED3E9B7EF5AE2 /* MofiWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A149F287101A61757C3705 /* MofiWindow.swift */; };
 		15A14A0BD858323C746F1445 /* MofiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A147E83F58165C6D34B348 /* MofiTableView.swift */; };
@@ -22,6 +23,7 @@
 		15A141B7B07431C2AF43DCF0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		15A142D5C5C2FC324B0F29E9 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		15A143620655553C14C8887E /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		15A147C84C7A21A80267BB90 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		15A147E83F58165C6D34B348 /* MofiTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MofiTableView.swift; sourceTree = "<group>"; };
 		15A149F287101A61757C3705 /* MofiWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MofiWindow.swift; sourceTree = "<group>"; };
 		C44A99C0201B74AC00482437 /* mofi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mofi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 				C4EDAA93201C5B1F009F80AB /* main.swift */,
 				15A141B7B07431C2AF43DCF0 /* Config.swift */,
 				15A1449315D63A051C0048F4 /* view */,
+				15A147C84C7A21A80267BB90 /* AppStore.swift */,
 			);
 			path = mofi;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				15A142AB558ED3E9B7EF5AE2 /* MofiWindow.swift in Sources */,
 				15A14A0BD858323C746F1445 /* MofiTableView.swift in Sources */,
 				15A14B0FE6978F2B5B1417CD /* SearchTextField.swift in Sources */,
+				15A1416B612402F66A0717CF /* AppStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
