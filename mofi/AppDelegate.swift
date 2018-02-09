@@ -21,13 +21,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         NSApp.activate(ignoringOtherApps: true)
         var config = Config()
-        window = MofiWindow.makeFrom(config: &config)
+        window = MofiWindow(config: &config)
 
         containerView = NSView(frame: window.frame)
 
         window.contentView = containerView
 
-        textField = SearchTextField.makeFrom(config: &config)
+        textField = SearchTextField(config: &config)
         textField.frame = NSRect(
                 x: 0,
                 y: containerView.frame.height - textField.fontHeight,
@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
 
         let scrollViewHeight = containerView.frame.size.height - textField.frame.size.height
-        tableView = MofiTableView.makeFrom(config: &config)
+        tableView = MofiTableView(config: &config)
 
         let scrollView = NSScrollView()
         scrollView.frame = NSRect(

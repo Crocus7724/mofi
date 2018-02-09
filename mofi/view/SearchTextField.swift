@@ -10,6 +10,18 @@ import Cocoa
 class SearchTextField: NSTextField {
     private var config: Config!
 
+    init(config: inout Config) {
+        super.init(frame: NSRect.zero)
+        self.config = config
+        self.focusRingType = .none
+        self.font = NSFont.messageFont(ofSize: 38)
+        self.isBordered = false
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     var fontHeight: CGFloat {
         get {
             guard let font = self.font else {
@@ -19,30 +31,8 @@ class SearchTextField: NSTextField {
         }
     }
 
-//    convenience init() {
-//        self.init(string: "")
-////            let m = NSLayoutManager()
-////            let h = m.defaultLineHeight(for: font) + 1
-////            let t = SearchTextField(frame: NSRect(
-////                    x: 0,
-////                    y: containerView.frame.height - h,
-////                    width: window.contentView?.frame.size.width ?? 0,
-////                    height: h
-////            ))
-//    }
-
     override func cancelOperation(_ sender: Any?) {
         NSApp.terminate(self)
-    }
-
-    static func makeFrom(config: inout Config) -> SearchTextField {
-        let t = SearchTextField()
-        t.config = config
-        t.focusRingType = .none
-        t.font = NSFont.messageFont(ofSize: 38)
-        t.isBordered = false
-
-        return t
     }
 }
 

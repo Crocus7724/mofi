@@ -6,23 +6,28 @@
 import Foundation
 import Cocoa
 
+fileprivate let tableViewRowHeight: CGFloat = 30
+
 class MofiTableView: NSTableView {
-    static func makeFrom(config: inout Config) -> MofiTableView {
-        let tableView = MofiTableView()
+    private var config: Config!
+
+    init(config: inout Config) {
+        super.init(frame: NSRect.zero)
+
         let controllers = NSArrayController(content: ["hoge", "foo"])
-        tableView.bind(NSBindingName.content, to: controllers, withKeyPath: #keyPath(NSArrayController.arrangedObjects))
-        let c = NSTableColumn()
-        tableView.columnAutoresizingStyle = .uniformColumnAutoresizingStyle
-        c.resizingMask = .autoresizingMask
-        tableView.addTableColumn(c)
-        tableView.rowHeight = 30
+        self.bind(NSBindingName.content, to: controllers, withKeyPath: #keyPath(NSArrayController.arrangedObjects))
+        let column = NSTableColumn()
+        column.resizingMask = .autoresizingMask
+        self.addTableColumn(column)
+        self.columnAutoresizingStyle = .uniformColumnAutoresizingStyle
+        self.rowHeight = tableViewRowHeight
 
-        tableView.delegate = tableView
-        tableView.dataSource = tableView
+        self.delegate = self
+        self.dataSource = self
+    }
 
-        tableView.backgroundColor = NSColor.blue
-
-        return tableView
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }
 

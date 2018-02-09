@@ -10,19 +10,17 @@ import Carbon.HIToolbox
 class MofiWindow: NSPanel {
     private var config: Config!
 
-    static func makeFrom(config: inout Config) -> MofiWindow {
-        let p = MofiWindow()
-        p.config = config
-        let f = NSScreen.main?.visibleFrame
-        p.level = .floating
-        p.styleMask = [.unifiedTitleAndToolbar]
-        p.setContentSize(NSSize(width: (f?.width ?? 0) * 0.8, height: 200))
-        p.backgroundColor = .clear
-        p.alphaValue = 1
-        p.isOpaque = false
-        p.center()
-
-        return p
+    init(config: inout Config) {
+        super.init(contentRect: NSRect.zero, styleMask: [.unifiedTitleAndToolbar], backing: .buffered, defer: false)
+        self.config = config
+        let visibleFrame = NSScreen.main?.visibleFrame
+        self.setContentSize(NSSize(width: (visibleFrame?.width ?? 0) * 0.8, height: 200))
+        self.level = .floating
+        self.styleMask = .unifiedTitleAndToolbar
+        self.backgroundColor = .clear
+        self.alphaValue = 0.8
+        self.isOpaque = false
+        self.center()
     }
 
     override var canBecomeKey: Bool {
