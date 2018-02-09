@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  mofi
-//
-//  Created by 山本一樹 on 2018/01/26.
-//  Copyright © 2018 Kazuki Yamamoto. All rights reserved.
-//
-
 import Cocoa
 
 let borderViewHeight: CGFloat = 3.0
