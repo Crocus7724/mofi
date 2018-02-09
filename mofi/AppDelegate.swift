@@ -36,13 +36,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
 
         let scrollViewHeight = containerView.frame.size.height - textField.frame.size.height
-        let scrollView = MofiTableView.makeFrom(config: &config)
+        tableView = MofiTableView.makeFrom(config: &config)
+
+        let scrollView = NSScrollView()
         scrollView.frame = NSRect(
                 x: containerView.frame.origin.x,
                 y: 0,
                 width: containerView.frame.size.width,
                 height: scrollViewHeight - borderViewHeight
         )
+        let clipView = NSClipView(frame: scrollView.frame)
+        clipView.documentView = tableView
+        scrollView.documentView = clipView
+
         containerView.addSubview(scrollView)
         containerView.addSubview(textField)
         let borderView = BorderView(config: &config)

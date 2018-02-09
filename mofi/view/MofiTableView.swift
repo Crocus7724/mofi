@@ -7,10 +7,10 @@ import Foundation
 import Cocoa
 
 class MofiTableView: NSTableView {
-    static func makeFrom(config: inout Config) -> NSScrollView {
+    static func makeFrom(config: inout Config) -> MofiTableView {
         let tableView = MofiTableView()
         let controllers = NSArrayController(content: ["hoge", "foo"])
-        tableView.bind(NSBindingName.content, to: controllers, withKeyPath: "arrangedObjects")
+        tableView.bind(NSBindingName.content, to: controllers, withKeyPath: #keyPath(NSArrayController.arrangedObjects))
         let c = NSTableColumn()
         tableView.columnAutoresizingStyle = .uniformColumnAutoresizingStyle
         c.resizingMask = .autoresizingMask
@@ -21,12 +21,8 @@ class MofiTableView: NSTableView {
         tableView.dataSource = tableView
 
         tableView.backgroundColor = NSColor.blue
-        let scrollView = NSScrollView()
-        let clipView = NSClipView(frame: scrollView.frame)
-        clipView.documentView = tableView
-        scrollView.documentView = clipView
 
-        return scrollView
+        return tableView
     }
 }
 
