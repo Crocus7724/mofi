@@ -28,7 +28,26 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C4D801B4202E46B9009B0AC6"
+               BuildableName = "mofiTests.xctest"
+               BlueprintName = "mofiTests"
+               ReferencedContainer = "container:mofi.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C44A99BF201B74AC00482437"
+            BuildableName = "mofi.app"
+            BlueprintName = "mofi"
+            ReferencedContainer = "container:mofi.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -62,6 +81,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C44A99BF201B74AC00482437"
+            BuildableName = "mofi.app"
+            BlueprintName = "mofi"
+            ReferencedContainer = "container:mofi.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

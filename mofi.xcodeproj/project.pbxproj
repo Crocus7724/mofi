@@ -15,9 +15,20 @@
 		15A14B39AB8A4E4D7CB2E73D /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A143620655553C14C8887E /* BorderView.swift */; };
 		C44A99C4201B74AC00482437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44A99C3201B74AC00482437 /* AppDelegate.swift */; };
 		C44A99C8201B74AC00482437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44A99C7201B74AC00482437 /* Assets.xcassets */; };
+		C4D801B8202E46B9009B0AC6 /* mofiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D801B7202E46B9009B0AC6 /* mofiTests.swift */; };
 		C4EDAA94201C5B1F009F80AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EDAA93201C5B1F009F80AB /* main.swift */; };
 		C4EDAA99201E22F4009F80AB /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EDAA98201E22F3009F80AB /* Yams.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4D801BA202E46B9009B0AC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C44A99B8201B74AC00482437 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C44A99BF201B74AC00482437;
+			remoteInfo = mofi;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		15A141B7B07431C2AF43DCF0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -31,6 +42,9 @@
 		C44A99C7201B74AC00482437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C44A99CC201B74AC00482437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44A99CD201B74AC00482437 /* mofi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mofi.entitlements; sourceTree = "<group>"; };
+		C4D801B5202E46B9009B0AC6 /* mofiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mofiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4D801B7202E46B9009B0AC6 /* mofiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mofiTests.swift; sourceTree = "<group>"; };
+		C4D801B9202E46B9009B0AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4EDAA93201C5B1F009F80AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C4EDAA98201E22F3009F80AB /* Yams.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yams.framework; path = Carthage/Build/Mac/Yams.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +55,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4EDAA99201E22F4009F80AB /* Yams.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4D801B2202E46B9009B0AC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				C44A99C2201B74AC00482437 /* mofi */,
+				C4D801B6202E46B9009B0AC6 /* mofiTests */,
 				C44A99C1201B74AC00482437 /* Products */,
 				C4EDAA97201E22F3009F80AB /* Frameworks */,
 			);
@@ -71,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				C44A99C0201B74AC00482437 /* mofi.app */,
+				C4D801B5202E46B9009B0AC6 /* mofiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +111,15 @@
 				15A147C84C7A21A80267BB90 /* AppStore.swift */,
 			);
 			path = mofi;
+			sourceTree = "<group>";
+		};
+		C4D801B6202E46B9009B0AC6 /* mofiTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4D801B7202E46B9009B0AC6 /* mofiTests.swift */,
+				C4D801B9202E46B9009B0AC6 /* Info.plist */,
+			);
+			path = mofiTests;
 			sourceTree = "<group>";
 		};
 		C4EDAA97201E22F3009F80AB /* Frameworks */ = {
@@ -119,6 +151,24 @@
 			productReference = C44A99C0201B74AC00482437 /* mofi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C4D801B4202E46B9009B0AC6 /* mofiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4D801BE202E46B9009B0AC6 /* Build configuration list for PBXNativeTarget "mofiTests" */;
+			buildPhases = (
+				C4D801B1202E46B9009B0AC6 /* Sources */,
+				C4D801B2202E46B9009B0AC6 /* Frameworks */,
+				C4D801B3202E46B9009B0AC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4D801BB202E46B9009B0AC6 /* PBXTargetDependency */,
+			);
+			name = mofiTests;
+			productName = mofiTests;
+			productReference = C4D801B5202E46B9009B0AC6 /* mofiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -132,6 +182,11 @@
 					C44A99BF201B74AC00482437 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					C4D801B4202E46B9009B0AC6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C44A99BF201B74AC00482437;
 					};
 				};
 			};
@@ -149,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				C44A99BF201B74AC00482437 /* mofi */,
+				C4D801B4202E46B9009B0AC6 /* mofiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44A99C8201B74AC00482437 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4D801B3202E46B9009B0AC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +260,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C4D801B1202E46B9009B0AC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D801B8202E46B9009B0AC6 /* mofiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4D801BB202E46B9009B0AC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C44A99BF201B74AC00482437 /* mofi */;
+			targetProxy = C4D801BA202E46B9009B0AC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C44A99CE201B74AC00482437 /* Debug */ = {
@@ -344,6 +423,36 @@
 			};
 			name = Release;
 		};
+		C4D801BC202E46B9009B0AC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = mofiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.crocus.mofiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mofi.app/Contents/MacOS/mofi";
+			};
+			name = Debug;
+		};
+		C4D801BD202E46B9009B0AC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = mofiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.crocus.mofiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mofi.app/Contents/MacOS/mofi";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -361,6 +470,15 @@
 			buildConfigurations = (
 				C44A99D1201B74AC00482437 /* Debug */,
 				C44A99D2201B74AC00482437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4D801BE202E46B9009B0AC6 /* Build configuration list for PBXNativeTarget "mofiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4D801BC202E46B9009B0AC6 /* Debug */,
+				C4D801BD202E46B9009B0AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
