@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15A14026B7EEED686707CB91 /* MofiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A14EC7F04CEF1409EB4B07 /* MofiTableView.swift */; };
 		15A14284E690F6B8B5B58D9B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A141B7B07431C2AF43DCF0 /* Config.swift */; };
-		15A146CE078F45382511D06C /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A145C53A2066A134D71C20 /* BorderView.swift */; };
-		15A147A9DAC6C9DE42C858D7 /* MofiWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A146511DC23A11F5551731 /* MofiWindow.swift */; };
-		15A14DB4752EA0CB21296597 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1452C860A0B42A6DDB299 /* SearchTextField.swift */; };
+		15A142AB558ED3E9B7EF5AE2 /* MofiWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A149F287101A61757C3705 /* MofiWindow.swift */; };
+		15A14A0BD858323C746F1445 /* MofiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A147E83F58165C6D34B348 /* MofiTableView.swift */; };
+		15A14B0FE6978F2B5B1417CD /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A142D5C5C2FC324B0F29E9 /* SearchTextField.swift */; };
+		15A14B39AB8A4E4D7CB2E73D /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A143620655553C14C8887E /* BorderView.swift */; };
 		C44A99C4201B74AC00482437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44A99C3201B74AC00482437 /* AppDelegate.swift */; };
 		C44A99C8201B74AC00482437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44A99C7201B74AC00482437 /* Assets.xcassets */; };
 		C4EDAA94201C5B1F009F80AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EDAA93201C5B1F009F80AB /* main.swift */; };
@@ -20,10 +20,10 @@
 
 /* Begin PBXFileReference section */
 		15A141B7B07431C2AF43DCF0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		15A1452C860A0B42A6DDB299 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
-		15A145C53A2066A134D71C20 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
-		15A146511DC23A11F5551731 /* MofiWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MofiWindow.swift; sourceTree = "<group>"; };
-		15A14EC7F04CEF1409EB4B07 /* MofiTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MofiTableView.swift; sourceTree = "<group>"; };
+		15A142D5C5C2FC324B0F29E9 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		15A143620655553C14C8887E /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		15A147E83F58165C6D34B348 /* MofiTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MofiTableView.swift; sourceTree = "<group>"; };
+		15A149F287101A61757C3705 /* MofiWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MofiWindow.swift; sourceTree = "<group>"; };
 		C44A99C0201B74AC00482437 /* mofi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mofi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44A99C3201B74AC00482437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C44A99C7201B74AC00482437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15A1449315D63A051C0048F4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				15A143620655553C14C8887E /* BorderView.swift */,
+				15A149F287101A61757C3705 /* MofiWindow.swift */,
+				15A147E83F58165C6D34B348 /* MofiTableView.swift */,
+				15A142D5C5C2FC324B0F29E9 /* SearchTextField.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		C44A99B7201B74AC00482437 = {
 			isa = PBXGroup;
 			children = (
@@ -71,10 +82,7 @@
 				C44A99CD201B74AC00482437 /* mofi.entitlements */,
 				C4EDAA93201C5B1F009F80AB /* main.swift */,
 				15A141B7B07431C2AF43DCF0 /* Config.swift */,
-				15A1452C860A0B42A6DDB299 /* SearchTextField.swift */,
-				15A146511DC23A11F5551731 /* MofiWindow.swift */,
-				15A14EC7F04CEF1409EB4B07 /* MofiTableView.swift */,
-				15A145C53A2066A134D71C20 /* BorderView.swift */,
+				15A1449315D63A051C0048F4 /* view */,
 			);
 			path = mofi;
 			sourceTree = "<group>";
@@ -178,10 +186,10 @@
 				C4EDAA94201C5B1F009F80AB /* main.swift in Sources */,
 				C44A99C4201B74AC00482437 /* AppDelegate.swift in Sources */,
 				15A14284E690F6B8B5B58D9B /* Config.swift in Sources */,
-				15A14DB4752EA0CB21296597 /* SearchTextField.swift in Sources */,
-				15A147A9DAC6C9DE42C858D7 /* MofiWindow.swift in Sources */,
-				15A14026B7EEED686707CB91 /* MofiTableView.swift in Sources */,
-				15A146CE078F45382511D06C /* BorderView.swift in Sources */,
+				15A14B39AB8A4E4D7CB2E73D /* BorderView.swift in Sources */,
+				15A142AB558ED3E9B7EF5AE2 /* MofiWindow.swift in Sources */,
+				15A14A0BD858323C746F1445 /* MofiTableView.swift in Sources */,
+				15A14B0FE6978F2B5B1417CD /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
