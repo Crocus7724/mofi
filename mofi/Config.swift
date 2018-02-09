@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import Yams
 
-class Config {
+struct Config: Codable {
 }
